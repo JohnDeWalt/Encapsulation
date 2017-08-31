@@ -46,7 +46,7 @@ public class Employee {
             + fmtDate);
     }
 
-    // Assume this must be performed first, and assume that an employee
+    // Assume this must be performed second, and assume that an employee
     // would only do this once, upon being hired.:
     public void meetDepartmentStaff() {
         metDeptStaff = true;
