@@ -35,10 +35,16 @@ public class Employee {
         this.lastName = lastName;
         this.ssn = ssn;
     }
-
+    public void startOrientationDay(){
+        meetWithHrForBenefitAndSalryInfo();
+        meetDepartmentStaff();
+        reviewDeptPolicies();
+        moveIntoCubicle(cubeId);
+        
+    }
     // Assume this must be performed first, and assume that an employee
     // would only do this once, upon being hired.
-    public void meetWithHrForBenefitAndSalryInfo() {
+    private void meetWithHrForBenefitAndSalryInfo() {
         metWithHr = true;
         SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
         String fmtDate = sdf.format(orientationDate);        
@@ -48,7 +54,7 @@ public class Employee {
 
     // Assume this must be performed second, and assume that an employee
     // would only do this once, upon being hired.:
-    public void meetDepartmentStaff() {
+    private void meetDepartmentStaff() {
         metDeptStaff = true;
         SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
         String fmtDate = sdf.format(orientationDate);        
@@ -87,6 +93,9 @@ public class Employee {
     // allowed through validation.
     
     public void setFirstName(String firstName) {
+        if(firstName == null || firstName.isEmpty()){
+            System.out.println("");
+        }
        this.firstName = firstName;
     }
 
