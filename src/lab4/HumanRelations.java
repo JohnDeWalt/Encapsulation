@@ -10,5 +10,5 @@ package lab4;
  * @author Jackie
  */
 public class HumanRelations {
-    
+    private Employee e;
 }

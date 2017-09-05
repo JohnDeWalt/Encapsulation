@@ -10,5 +10,6 @@ package lab4;
  * @author Jackie
  */
 public class Company {
+    private HumanRelations hr;
     
 }
