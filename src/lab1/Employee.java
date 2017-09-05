@@ -82,23 +82,7 @@ public class Employee {
     public void setSsn(String ssn) {
         this.ssn = ssn;
     }
-
-    public void setMetWithHr(boolean metWithHr) {
-        this.metWithHr = metWithHr;
-    }
-
-    public void setMetDeptStaff(boolean metDeptStaff) {
-        this.metDeptStaff = metDeptStaff;
-    }
-
-    public void setReviewedDeptPolicies(boolean reviewedDeptPolicies) {
-        this.reviewedDeptPolicies = reviewedDeptPolicies;
-    }
-
-    public void setMovedIn(boolean movedIn) {
-        this.movedIn = movedIn;
-    }
-
+    
     public void setCubeId(String cubeId) {
         this.cubeId = cubeId;
     }
