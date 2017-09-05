@@ -91,7 +91,7 @@ public class Employee {
     
     public void setFirstName(String firstName) {
         if(firstName == null || firstName.isEmpty()){
-            System.out.println("");
+            System.out.println("First name is required");
         }
        this.firstName = firstName;
     }
@@ -101,6 +101,9 @@ public class Employee {
     }
 
     public void setLastName(String lastName) {
+         if(lastName == null || lastName.isEmpty()){
+            System.out.println("Last name is required");
+        }
        this.lastName = lastName;
     }
 
@@ -109,6 +112,9 @@ public class Employee {
     }
 
     public void setSsn(String ssn) {
+        if(ssn == null || ssn.length() < 9) {
+            System.out.println("ssn is required");
+        }
         this.ssn = ssn;
     }
 
@@ -151,6 +157,9 @@ public class Employee {
 
     
     public void setCubeId(String cubeId) {
+        if(cubeId == null || cubeId.isEmpty()){
+            System.out.println("Cube ID is required");
+        }
         this.cubeId = cubeId;
     }
 
@@ -159,6 +168,9 @@ public class Employee {
     }
 
     public void setOrientationDate(Date orientationDate) {
+        if(orientationDate == null){
+            System.out.println("Orientation date is required");
+        }
         this.orientationDate = orientationDate;
     }
 }
