@@ -71,15 +71,23 @@ public class Employee {
     }
 
     public void setFirstName(String firstName) {
-   
+        if(firstName == null || firstName.isEmpty()){
+            System.out.println("First name is required");
+        }
         this.firstName = firstName;
     }
 
     public void setLastName(String lastName) {
+        if(lastName == null || lastName.isEmpty()){
+            System.out.println("Last name is required");
+        }
         this.lastName = lastName;
     }
 
     public void setSsn(String ssn) {
+        if(ssn == null || ssn.length() < 9){
+            System.out.println("Social securtiy number is required and must be 9 characters");
+        }
         this.ssn = ssn;
     }
     
@@ -88,6 +96,9 @@ public class Employee {
     }
 
     public void setOrientationDate(Date orientationDate) {
+        if(orientationDate == null){
+            System.out.println("Orientation date is required");
+        }
         this.orientationDate = orientationDate;
     }
 
