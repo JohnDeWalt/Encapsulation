@@ -11,6 +11,9 @@ import java.util.Date;
  * @author      Jim Lombardo, WCTC Instructor
  * @version     1.02
  */
+/*
+Didnt need everything i had in the constructor and need to change error messages
+*/
 public class Employee {
     private String firstName;
     private String lastName;
@@ -22,7 +25,7 @@ public class Employee {
     private String cubeId;
     private Date orientationDate;
 
-    public Employee(String firstName, String lastName, String ssn, String cubeId, Date orientationDate) {
+    public Employee(String firstName, String lastName, String ssn) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.ssn = ssn;
@@ -30,8 +33,8 @@ public class Employee {
         //this.metDeptStaff = metDeptStaff;
         //this.reviewedDeptPolicies = reviewedDeptPolicies;
         //this.movedIn = movedIn;
-        this.cubeId = cubeId;
-        this.orientationDate = orientationDate;
+        //this.cubeId = cubeId;
+        //this.orientationDate = orientationDate;
     }
 
     public String getFirstName() {
@@ -72,21 +75,21 @@ public class Employee {
 
     public void setFirstName(String firstName) {
         if(firstName == null || firstName.isEmpty()){
-            System.out.println("First name is required");
+            throw new IllegalArgumentException("first name is required");
         }
         this.firstName = firstName;
     }
 
     public void setLastName(String lastName) {
         if(lastName == null || lastName.isEmpty()){
-            System.out.println("Last name is required");
+            throw new IllegalArgumentException("last name is required");
         }
         this.lastName = lastName;
     }
 
     public void setSsn(String ssn) {
         if(ssn == null || ssn.length() < 9){
-            System.out.println("Social securtiy number is required and must be 9 characters");
+            throw new IllegalArgumentException("Social securtiy number is required and must be 9 characters");
         }
         this.ssn = ssn;
     }
@@ -97,7 +100,7 @@ public class Employee {
 
     public void setOrientationDate(Date orientationDate) {
         if(orientationDate == null){
-            System.out.println("Orientation date is required");
+            throw new IllegalArgumentException("Orientation date is required");
         }
         this.orientationDate = orientationDate;
     }
